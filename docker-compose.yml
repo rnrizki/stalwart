@@ -1,0 +1,26 @@
+services:
+  stalwart-mail:
+    image: stalwartlabs/stalwart:v0.16.21
+    container_name: mail-stalwart-mmfbt9
+    ports:
+      - "25:25"
+      - "587:587"
+      - "465:465"
+      - "143:143"
+      - "993:993"
+      - "4190:4190"
+      - "110:110"
+      - "995:995"
+    volumes:
+      - /etc/dokploy/compose/mail-stalwart-mmfbt9/etc:/etc/stalwart
+      - stalwart_data:/var/lib/stalwart
+    restart: unless-stopped
+    networks:
+      - dokploy-network
+
+networks:
+  dokploy-network:
+    external: true
+
+volumes:
+  stalwart_data:

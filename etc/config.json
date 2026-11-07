@@ -1,0 +1,1 @@
+{"@type":"PostgreSql","timeout":15000,"useTls":false,"allowInvalidCerts":true,"poolMaxConnections":10,"poolRecyclingMethod":"fast","readReplicas":{},"host":"database-postgresql-fy9a1w","port":5432,"database":"stalwart1","authUsername":"postgres","authSecret":{"@type":"Value","secret":"dNGwXb9OCrJNNaJMoKI7"},"options":null}
